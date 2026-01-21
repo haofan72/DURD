@@ -8,7 +8,7 @@ This is the code repository for paper “Deep Unfolding Residual Decomposition f
 
 ## Dataset Splits (How to Use)
 
-- Dataset split lists: [NUDT-SIRST](https://github.com/YeRen123455/Infrared-Small-Target-Detection), [SIRST](https://github.com/YimianDai/sirst), [NUST-SIRST](https://github.com/wanghuanphd/MDvsFA_cGAN).
+- Dataset: [NUDT-SIRST](https://github.com/YeRen123455/Infrared-Small-Target-Detection), [SIRST](https://github.com/YimianDai/sirst), [NUST-SIRST](https://github.com/wanghuanphd/MDvsFA_cGAN).
 
 Each `.txt` file contains **one sample name per line**, e.g. `Misc_238`. Train/Test are nearly 1:1 in our official splits. 
 
