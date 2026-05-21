@@ -1,15 +1,80 @@
 # DURD
-This is the code repository for paper “Deep Unfolding Residual Decomposition for Infrared Small Target Detection”.
 
-> 当前仓库状态：**代码/模型即将上传**（整理中）。  
+This is the code repository for paper **“Deep Unfolding Residual Decomposition for Infrared Small Target Detection”**.
 
-## Updates
-- 2026-01: Release official split lists for SIRST / NUST-SIRST / NUDT-SIRST. Code coming soon.
+## Environment
 
-## Dataset Splits (How to Use)
+- Python 3
+- PyTorch + torchvision
+- numpy, tqdm
+- scikit-image 
+- scikit-learn 
+- ...
 
-- Dataset: [NUDT-SIRST](https://github.com/YeRen123455/Infrared-Small-Target-Detection), [SIRST](https://github.com/YimianDai/sirst), [NUST-SIRST](https://github.com/wanghuanphd/MDvsFA_cGAN).
+## Data Preparation
 
-Each `.txt` file contains **one sample name per line**, e.g. `Misc_238`. Train/Test are nearly 1:1 in our official splits. 
+Datasets available at: 
+- [NUDT-SIRST](https://github.com/YeRen123455/Infrared-Small-Target-Detection)
+- [SIRST](https://github.com/YimianDai/sirst)
+- [NUST-SIRST](https://github.com/wanghuanphd/MDvsFA_cGAN)
 
-You can use these ids to index your local dataset files (dataset/images/xx.png; dataset/masks/xx.png) according to your dataset naming rule.
+Expected dataset structure:
+
+```
+dataset/<DATASET_NAME>/
+	images/   *.png
+	masks/    *.png
+```
+
+### Official split lists
+
+This repo includes split files under:
+
+- `dataset/SIRST/`
+- `dataset/NUST-SIRST/`
+- `dataset/NUDT-SIRST/`
+
+Each `splite_*.txt` contains **one sample id per line** (e.g. `Misc_238`). The dataset loader uses these ids to locate:
+
+- `dataset/<DATASET_NAME>/images/<id>.png`
+- `dataset/<DATASET_NAME>/masks/<id>.png`
+
+
+## Training
+Run:
+
+```bash
+python train.py
+```
+
+Outputs are saved to:
+
+- `result/<DATASET_NAME>_<timestamp>/Saved_parameters.pt`
+- `result/<DATASET_NAME>_<timestamp>/best_IoU.log`
+
+## Testing
+
+Run:
+
+```bash
+python test.py
+```
+
+## Citation
+
+If you find this work useful, please cite the paper:
+
+```bibtex
+@ARTICLE{11523120,
+  author={Hao, Fan and Wei, Feng and Zhou, Feng and Wang, Zhipeng and Yao, Shichao and Yang, Xueyan and Ma, Zongfang},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={Deep Unfolding Residual Decomposition for Infrared Small Target Detection}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Ranking (statistics);Modeling;Signal detection;Object detection;Modules (abstract algebra);Optimization;Personal digital devices;Interference;Matrices;Robustness;Infrared small target;deep unfolding;decomposition;multi-scale;deep supervision},
+  doi={10.1109/TGRS.2026.3694155}
+}
+```
+
