@@ -70,11 +70,9 @@ If you find this work useful, please cite the paper:
   journal={IEEE Transactions on Geoscience and Remote Sensing}, 
   title={Deep Unfolding Residual Decomposition for Infrared Small Target Detection}, 
   year={2026},
-  volume={},
-  number={},
-  pages={1-1},
-  keywords={Ranking (statistics);Modeling;Signal detection;Object detection;Modules (abstract algebra);Optimization;Personal digital devices;Interference;Matrices;Robustness;Infrared small target;deep unfolding;decomposition;multi-scale;deep supervision},
-  doi={10.1109/TGRS.2026.3694155}
-}
+  volume={64},
+  number={5006013},
+  pages={1-13},
+  doi={10.1109/TGRS.2026.3694155}}
 ```
 
