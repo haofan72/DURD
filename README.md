@@ -74,5 +74,22 @@ If you find this work useful, please cite the paper:
   number={5006013},
   pages={1-13},
   doi={10.1109/TGRS.2026.3694155}}
+
+@InProceedings{10.1007/978-981-92-2859-1_18,
+  author="Hao, Fan
+  and Zhou, Feng
+  and Li, Yasheng
+  and Jia, Baonan",
+  editor="Niu, Jianwei
+  and Qiu, Meikang
+  and Cao, Cungen",
+  title="Deep Adaptive Structured Decomposition for Infrared Small Target Detection",
+  booktitle="Knowledge Science, Engineering and Management",
+  year="2027",
+  publisher="Springer Nature Singapore",
+  address="Singapore",
+  pages="243--254"
+  }
+
 ```
 
