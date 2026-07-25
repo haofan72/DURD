@@ -88,7 +88,8 @@ If you find this work useful, please cite the paper:
   year="2027",
   publisher="Springer Nature Singapore",
   address="Singapore",
-  pages="243--254"
+  pages="243--254",
+  isbn="978-981-92-2859-1"
   }
 
 ```
