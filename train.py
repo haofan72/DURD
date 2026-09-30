@@ -10,7 +10,6 @@ from utils.tools import (
     SoftIoULoss,
     make_dir,
     para_parser,
-    save_model,
     train_head,
 )
 warnings.filterwarnings("ignore")
@@ -89,16 +88,9 @@ def testing_epoch(e):
 
 
 def main():
-    best_iou = 0
     for epoch in range(args.epochs):
         train_loss = training_epoch(epoch)
         test_loss, mean_IOU = testing_epoch(epoch)
-
-        if mean_IOU > best_iou:
-            best_iou = mean_IOU
-            save_model(best_iou, args, train_loss, test_loss, epoch,
-                       model)
-            print(f'Epoch {epoch}, model saved !!! !!!  |   mIOU:{best_iou}')
 
         scheduler.step()
 

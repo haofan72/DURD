@@ -145,28 +145,6 @@ class DURD_Loss(nn.Module):
         return loss_total
 
 
-def save_model(best_iou, args, train_loss, test_loss, epoch, net):
-    save_path = args.save_path
-    save_dir = os.path.join('result', save_path)
-    os.makedirs(save_dir, exist_ok=True)
-    save_mIoU_dir = os.path.join(save_dir, 'best_IoU.log')
-    now = datetime.now()
-    dt_string = now.strftime("%Y/%m/%d %H:%M:%S")
-    save_model_and_result(dt_string, epoch, train_loss, test_loss, best_iou,
-                          save_mIoU_dir)
-
-    torch.save(net.state_dict(), os.path.join(
-        save_dir, "Saved_parameters.pt"))
-
-
-def save_model_and_result(dt_string, epoch, train_loss, test_loss, best_iou,
-                          save_mIoU_dir):
-    with open(save_mIoU_dir, 'a') as f:
-        f.write(
-            '{} - {:04d}:\t - train_loss: {:04f}:\t - test_loss: {:04f}:\t - mIoU {:.4f}\n'
-            .format(dt_string, epoch, train_loss, test_loss, best_iou))
-
-
 def make_dir(dataset):
     now = datetime.now()
     dt_string = now.strftime("%Y_%m_%d_%H_%M_%S")
